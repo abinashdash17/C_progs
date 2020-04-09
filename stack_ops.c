@@ -17,7 +17,7 @@
  */
 #include <stdlib.h>
 #include <stdio.h>
-const int SZ = 100;
+const int SZ = 5;
 struct Stack{
 	int arr[100];
 	int top ;
@@ -35,27 +35,28 @@ int main(){
 	s1 -> top = -1;
 	while(1){
 		printf ( "enter a choice(push-a,pop-d,show-s,exit-e:\n" );
-		scanf ( "%c", &ch );
+		scanf ( " %c", &ch );
 		switch (ch){
-			case 'a':{
+			case 'a':
 				printf("Enter a num: ");
 				scanf ( "%d", &num );
 				push(s1,num);
 				break;
-			}
-			case 'd':{
+			case 'd':
 				num = pop(s1);
-				printf("%d is poped",num);
+				printf("%d is poped\n",num);
 				break;
-			}
-			case 's':{
+			
+			case 's':
 				showstack(s1);
 				break;
-			}
-			case 'e':{
+			
+			case 'e':
 				exit(0);
 				break ;
-			}
+			case '\n':
+				break;
+			
 			default :
 				printf ( "enter a valid choice\n" );
 
