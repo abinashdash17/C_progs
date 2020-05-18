@@ -34,8 +34,8 @@ int* rotLeft(int a_count, int* a, int d, int* result_count) {
 
 
 int main(){
-	int sh = 4;
-	int a[] = {1,2,3,4,5,6,7};
+	int sh = 10;
+	int a[] = {41,73,89,7,10,1,59,58,84,77,77,97,58,1,86,58,26,10,86,51};
 	int result_count = sizeof(a)/sizeof(a[0]);
 	int* b = malloc(sizeof(*b));
 	b = rotLeft(result_count,a,sh,&result_count);
